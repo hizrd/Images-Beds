@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>“益科” 智慧中控</title>
+    <style>
+        .btn{
+            width: 150px;
+            height: 50px;
+            border: none;
+            background-color: green;
+            line-height: 50px;
+            font-size: 30px;
+            text-align: center;
+            color: white;
+            border-radius: 50px;
+			cursor: pointer;/*设置鼠标箭头手势*/
+        }
+        .btn:focus{
+            outline: none;
+        }
+		.btn:hover{/*鼠标移动时的颜色变化*/
+			background-color: antiquewhite;
+		}
+        .btn-primary{
+            background-color: blue;
+        }
+        .btn-success{
+            background-color: green;
+        }
+        .btn-warning{
+            background-color: brown;
+        }
+        .btn-danger{
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+<div style="text-align:center;">
+	<span style="font-size:48px;color:#337FE5;">“益科” 智慧中控</span> 
+</div>
+<br>
+<div style="text-align:center;">
+	请确保在接入“益科” 创新工作室局域网使用
+</div>
+<br>
+<div style="text-align:center">
+    <input type="button" onclick="unlock()" value="开锁" class="btn btn-primary">
+    <input type="button" onclick="lock()" value="关锁" class="btn btn-success">
+</div>
+<br>
+<div style="text-align:center">
+
+    <input type="button" value="开灯牌" class="btn btn-warning">
+	<input type="button" value="关灯牌" class="btn btn-danger">
+</div>
+<script>
+function unlock() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "http://192.168.31.43:7123/p2", true);
+  xhttp.send();
+}
+function lock() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "http://192.168.31.43:7123/p1", true);
+  xhttp.send();
+}
+</script>
+</body>
+</html>
