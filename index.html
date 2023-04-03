@@ -60,14 +60,18 @@
 </div>
 <script>
 function unlock() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "http://192.168.31.43:7123/p2", true);
-  xhttp.send();
+  //var xhttp = new XMLHttpRequest();
+  //xhttp.open("GET", "http://192.168.31.43:7123/p2", true);
+  //xhttp.send();
+  const img = new Image();
+  img.src = 'http://192.168.31.43:7123/p2' // 请求
 }
 function lock() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "http://192.168.31.43:7123/p1", true);
-  xhttp.send();
+  //var xhttp = new XMLHttpRequest();
+  //xhttp.open("GET", "http://192.168.31.43:7123/p1", true);
+  //xhttp.send();
+  const img = new Image();
+  img.src = 'http://192.168.31.43:7123/p1' // 请求
 }
 </script>
 </body>
