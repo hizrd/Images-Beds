@@ -55,8 +55,8 @@
 <br>
 <div style="text-align:center">
 
-    <input type="button" value="开灯牌" class="btn btn-warning">
-	<input type="button" value="关灯牌" class="btn btn-danger">
+    <input type="button" onclick="lighton()" value="开灯牌" class="btn btn-warning">
+	<input type="button" onclick="lightoff()" value="关灯牌" class="btn btn-danger">
 
 </div>
 
@@ -66,7 +66,7 @@ function unlock() {
   //xhttp.open("GET", "http://192.168.102.56:6845/p2", true);
   //xhttp.send();
   const img = new Image();
-  img.src ="http://192.168.102.56:6845/iSups$z7"// 请求
+  img.src ="http://192.168.102.56:6845/iSupsaz7"// 请求
   //window.open("http://192.168.102.56:6845/iSups$z7","_blank");
 }
 function lock() {
@@ -74,8 +74,16 @@ function lock() {
   //xhttp.open("GET", "http://192.168.102.56:6845/p1", true);
   //xhttp.send();
   const img = new Image();
-  img.src ="http://192.168.102.56:6845/urbxT2%$"// 请求
+  img.src ="http://192.168.102.56:6845/urbxT2fs"// 请求
   //window.open("http://192.168.102.56:6845/urbxT2%$","_blank");
+}
+function lighton() {
+    const img = new Image();
+    img.src ="http://192.168.102.56:6845/lighton"// 请求
+}
+function lightoff() {
+    const img = new Image();
+    img.src ="http://192.168.102.56:6845/lightoff"// 请求
 }
 </script>
 </body>
