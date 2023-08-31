@@ -5,6 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>“益科” 智慧中控</title>
+    <style>
+        .btn{
+            width: 150px;
+            height: 50px;
+            border: none;
+            background-color: green;
+            line-height: 50px;
+            font-size: 30px;
+            text-align: center;
+            color: white;
+            border-radius: 50px;
+			cursor: pointer;/*设置鼠标箭头手势*/
+        }
+        .btn:focus{
+            outline: none;
+        }
+		.btn:hover{/*鼠标移动时的颜色变化*/
+			background-color: antiquewhite;
+		}
+        .btn-primary{
+            background-color: blue;
+        }
+        .btn-success{
+            background-color: green;
+        }
+        .btn-warning{
+            background-color: brown;
+        }
+        .btn-danger{
+            background-color: red;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,12 +47,46 @@
 <div style="text-align:center;">
 	请确保在接入“益科” 创新工作室局域网使用
 </div>
-
 <br>
-<div style="text-align:center;">
-<span id="jinrishici-sentence" style="font-size:32px;color:#e6b933;" >正在加载今日诗词....</span>
-<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<div style="text-align:center">
+    <input type="button" onclick="unlock()" value="开锁" class="btn btn-primary">
+    <input type="button" onclick="lock()" value="上锁" class="btn btn-success">
+</div>
+<br>
+<div style="text-align:center">
+
+    <input type="button" onclick="lighton()" value="开灯牌" class="btn btn-warning">
+	<input type="button" onclick="lightoff()" value="关灯牌" class="btn btn-danger">
+
 </div>
 
+<script>
+function unlock() {
+  //var xhttp = new XMLHttpRequest();
+  //xhttp.open("GET", "http://192.168.102.56:6845/p2", true);
+  //xhttp.send();
+  const img = new Image();
+  if(confirm("确定执行操作“开锁”？"))
+  img.src ="http://192.168.102.56:6845/S0rHr18UE1yx7vSu";// 请求
+  //window.open("http://192.168.102.56:6845/iSups$z7","_blank");
+}
+function lock() {
+  //var xhttp = new XMLHttpRequest();
+  //xhttp.open("GET", "http://192.168.102.56:6845/p1", true);
+  //xhttp.send();
+  const img = new Image();
+  if(confirm("确定执行操作“上锁”？"))
+  img.src ="http://192.168.102.56:6845/yvBtm0IQlwCWZ8ae";// 请求
+  //window.open("http://192.168.102.56:6845/urbxT2%$","_blank");
+}
+function lighton() {
+    const img = new Image();
+    img.src ="http://192.168.102.56:6845/lighton"// 请求
+}
+function lightoff() {
+    const img = new Image();
+    img.src ="http://192.168.102.56:6845/lightoff"// 请求
+}
+</script>
 </body>
 </html>
